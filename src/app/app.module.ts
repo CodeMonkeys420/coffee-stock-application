@@ -11,7 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
 import {FormsModule} from '@angular/forms';
-import {AngularFireModule} from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import {AngularFireStoreModule, Settings} from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { userInfo } from 'os';
+
 
 
 @NgModule({
@@ -21,14 +28,18 @@ import {AngularFireModule} from '@angular/fire';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStoreModule,
+
   ],
     
   providers: [
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {provide: FirestoreSettingsToken, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })
