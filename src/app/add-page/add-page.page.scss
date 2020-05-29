@@ -1,0 +1,93 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: white;
+    background-color: white !important;
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  .topheader{
+    background-color: #8A4B38 !important;
+  }
+  
+  .test1{
+    color: red;
+  }
+
+  
+  .top-toolbar{
+    background-color: #8A4B38 !important;
+  }
+  
+  .toolbar-container {
+    background-color: #8A4B38 !important;
+  }
+
+  .addpageclass {
+    background-color: white;
+  }
+  .addpageclass2 {
+      background-color: #8A4B38;
+}
+
+  .pagetexts {
+      color: #8A4B38;
+      font-weight: 100;
+      margin-top: 5%;
+      margin-left: 10%;
+      border-bottom-width: 10px;
+      border-color: black;
+  }
+
+  .barcodetop{
+    margin-left: 10%;
+    margin-right: 5%;
+    font-size: 10px;
+  }
+
+  .lines{
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 10px;
+
+  }
+  .nolines{
+    border: 10px !important;
+    border-color: black;
+
+}
+
+  .pagetexts2 {
+    color: #8A4B38;
+    font-size: 5;
+    font-weight: 100;
+    
+    align-self: end;
+    margin-right: 5%;
+}
+
+  .cameraimg{
+
+    margin-left: 5%;
+    align-self: end;
+  }

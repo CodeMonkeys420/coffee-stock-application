@@ -1,0 +1,106 @@
+<ion-header style="background-color: white !important;">
+  <ion-toolbar>
+
+
+    <ion-fab vertical="top" horizontal="start" >
+      <ion-fab-button size="small" href="/home" >
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <ion-title style="
+    background-color: #8A4B38 !important;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    ">
+      MANAGE FLAVOURS
+    </ion-title>
+
+    <ion-fab horizontal="end" vertical="top">
+      <ion-fab-button size="small" (click)="scanBar()">
+        <ion-icon name="barcode-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="addpageclass2">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid class="addpageclass">
+  <ion-row col-1>
+    <ion-col>
+  <ion-item class="barcodetop">
+  <ion-input placeholder="BARCODE" class="pagetexts" horizontal="50px"></ion-input>
+  </ion-item>
+    </ion-col>
+
+
+  <ion-col class="cameraimg">
+    <img height="70px" width="70px" src="https://cdncloudcart.com/assets/themes/flair/img/defaults/noimage/no-image.png">
+  </ion-col>
+
+
+
+      
+  </ion-row>
+  <ion-row>
+    <ion-item class="lines">
+      <ion-input placeholder="FLAVOUR NAME" class="pagetexts" horizontal="50px"></ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    <ion-item class="lines">
+      <ion-input placeholder="PRICE PER BOX" class="pagetexts" horizontal="50px"></ion-input>
+    </ion-item>
+    <ion-col>
+          <ion-item class="lines">
+      <ion-input placeholder="PRICE PER POD" class="pagetexts2" horizontal="50px"></ion-input>
+    </ion-item>
+    </ion-col>
+
+      
+  </ion-row>
+  <ion-row>
+    <ion-item class="lines">
+      <ion-input placeholder="PODS PER BOX" class="pagetexts" horizontal="50px"></ion-input>
+    </ion-item>
+      
+
+  </ion-row>
+  <ion-row>
+
+  </ion-row>
+  <div style="background-color: #8A4B38;">
+
+  </div>
+
+  </ion-grid>
+
+  <div *ngIf="scannedData">
+    <p>
+      Scanned Code Text : <b>{{ scannedData["text"] }}</b>
+    </p>
+    <p>
+      Scanned Code Format : <b>{{ scannedData["format"] }}</b>
+    </p>
+  </div>
+
+  <h1>Enter Value to Create QR code</h1>
+  <ion-input placeholder="Enter Input" [(ngModel)]="encodedData"></ion-input>
+
+  <ion-button color="success" (click)="generateBar()">
+    Create QR
+  </ion-button>
+
+
+
+</ion-content>
